@@ -4,7 +4,6 @@ import c_lib
 
 
 def factorial(n):
-    return n
     r = 1
 
     for i in range(1, n+1):
@@ -14,15 +13,11 @@ def factorial(n):
 
 
 def worker(n, n_repetitions):
-    print('init--')
-
     for _ in range(n_repetitions):
         factorial(n)
 
 
 def c_worker(n, n_repetitions):
-    print('init--')
-
     c_lib.factorial_without_GIL(n, n_repetitions)
 
 
